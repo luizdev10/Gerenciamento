@@ -43,7 +43,7 @@
 }
 
 #nomeCompleto {
-    padding: 5px;
+    padding: 7px;
     border: 0;
     border-radius: 5px;
 }
@@ -57,7 +57,7 @@
 .division #telefone {
     width: 90%;
     margin-right: 2px;
-    padding: 5px;
+    padding: 7px;
     border: 0;
     border-radius: 5px;
 }
@@ -65,7 +65,7 @@
 .division #indicacao {
     width: 90%;
     margin-left: 2px;
-    padding: 5px;
+    padding: 7px;
     border: 0;
     border-radius: 5px;
 }
@@ -85,7 +85,7 @@
 
 }
 #CPFyes, #enderecoyes,#dayyes, #beneficioyes, #responsavel, #novamente, #enderecono{
-    padding: 5px;
+    padding: 7px;
     border: 0;
     border-radius: 5px;
 }
