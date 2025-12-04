@@ -105,3 +105,22 @@
     font-size: 1em;
     background-color: var(--cor-input-borda);
 }
+
+#sucess{
+    font-size: 0.7em;
+    width: 70vw;
+    height: 40vh;
+    margin: auto;
+    border-radius: 6px;
+    background-color: var(--cor-destaque-secundaria);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#text-sucess{
+    margin-top: 3em;
+    text-align: center;
+}
+#ok{
+    margin: auto;
+}

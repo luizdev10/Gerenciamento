@@ -43,7 +43,7 @@ const sendForm = (event) => {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            name: 'luiz', email: 'qualquercoisa@gmail.com'
+            name: 'alicia', email: 'alyadksahdkhaf@gmail.com'
         })
     }).then(response => {
         console.log("Resposta do SheetMonkey:", response.status);
