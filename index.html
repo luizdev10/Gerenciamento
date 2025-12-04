@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Gerenciamento de clientes</title>
+</head>
+
+<body>
+    <header id="area-header">
+        <h2 class="title"> Gerenciamento de Clientes</h2>
+    </header>
+    <main>
+        <form id="formClient">
+            <input type="text" name="nome" placeholder="Nome Completo" id="nomeCompleto" required>
+            <div class="division">
+                <input type="number" name="contato" placeholder="Telefone" id="telefone" required>
+                <input type="text" name="indicacao" placeholder="Quem Indicou" id="indicacao" required>
+            </div>
+        
+            <label id="converteu">Converteu em Atendimento?</label>
+            <div id="check">
+                <div>
+                    <input type="radio" name="opcao" id="sim" value="sim" required>
+                    <label for="sim">Sim</label>
+                </div>
+                <div>
+                    <input type="radio" name="opcao" id="nao" value="nao" required>
+                    <label for="nao">Não</label>
+                </div>
+            </div>
+            <div id="responseYes">
+                <input type="number" name="cpf" placeholder="CPF" id="CPFyes" required>
+                <input type="text" name="Endereco" placeholder="Endereço" id="enderecoyes" required>
+                <input type="date" name="Qualdia" placeholder="Qual o dia" id="dayyes" required>
+                <input type="text" name="beneficio" placeholder="Qual o Beneficio" id="beneficioyes" required>
+                <input type="text" name="Dr.ª" placeholder="Qual a Dr.ª Responsavel" id="responsavel" required>
+            </div>
+            <div id="responseNo">
+                <label for="novamente">Qual dia entrar em contato novamente?</label>
+                <input type="date" name="diaContato" placeholder="Contato Novamente" id="novamente" required>
+                <input type="text" name="Endereco" placeholder="Endereço"  id="enderecono" required>
+            </div>
+            <button type="submit" id="btn-cad">Cadastrar</button>
+        </form>
+    </main>
+</body>
+
+</html>

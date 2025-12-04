@@ -1,0 +1,106 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root {
+    --cor-fundo-claro: #FFFFFC;
+    --cor-fundo-suave: #eeeeeb;
+    --cor-borda: #D9D9D3;
+    --cor-texto-principal: #303030;
+    --cor-texto-secundario: #666666;
+    --cor-texto-suave: #A3A3A3;
+    --cor-destaque-primaria: #800020;
+    --cor-destaque-hover: #590016;
+    --cor-destaque-secundaria: #B8A88E;
+    --cor-sucesso: #4B774B;
+    --cor-erro: #C04000;
+    --cor-input-fundo: var(--cor-fundo-claro);
+    --cor-input-borda: var(--cor-borda);
+}
+
+#area-header {
+    width: 100vw;
+    display: flex;
+}
+
+.title {
+    margin: 10px auto;
+    color: var(--cor-texto-principal);
+}
+
+#formClient {
+    margin: 10px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-fundo-suave);
+    gap: 5px;
+    padding: 5px;
+}
+
+#nomeCompleto {
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.division {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.division #telefone {
+    width: 90%;
+    margin-right: 2px;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.division #indicacao {
+    width: 90%;
+    margin-left: 2px;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+}
+#converteu {
+    margin: auto;
+}
+#check {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+#responseYes {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+
+}
+#CPFyes, #enderecoyes,#dayyes, #beneficioyes, #responsavel, #novamente, #enderecono{
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+}
+#responseNo {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#btn-cad{
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 5px;
+    border:0;
+    padding: 5px;
+    background-color: var(--cor-input-borda);
+}
