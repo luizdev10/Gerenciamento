@@ -18,40 +18,41 @@
     </header>
     <main>
         <form id="formClient">
-            <input type="text" name="nome" placeholder="Nome Completo" id="nomeCompleto" >
-            <div class="division">
-                <input type="number" name="contato" placeholder="Telefone" id="telefone" >
-                <input type="text" name="indicacao" placeholder="Quem Indicou" id="indicacao" >
-            </div>
-        
             <label id="converteu">Converteu em Atendimento?</label>
             <div id="check">
                 <div>
-                    <input type="radio" name="opcao" id="sim" value="sim" >
+                    <input type="radio" name="opcao" id="sim" value="sim">
                     <label for="sim">Sim</label>
                 </div>
                 <div>
-                    <input type="radio" name="opcao" id="nao" value="nao" >
+                    <input type="radio" name="opcao" id="nao" value="nao">
                     <label for="nao">Não</label>
                 </div>
             </div>
+            <input type="text" name="nome" placeholder="Nome Completo" id="nomeCompleto">
+            <div class="division">
+                <input type="number" name="contato" placeholder="Telefone" id="telefone">
+                <input type="text" name="indicacao" placeholder="Quem Indicou" id="indicacao">
+            </div>
+
             <div id="responseYes">
-                <input type="number" name="cpf" placeholder="CPF" id="CPFyes" >
-                <input type="text" name="Endereco" placeholder="Endereço" id="enderecoyes" >
-                <input type="date" name="Qualdia" placeholder="Qual o dia" id="dayyes" >
-                <input type="text" name="beneficio" placeholder="Qual o Beneficio" id="beneficioyes" >
-                <input type="text" name="Dr.ª" placeholder="Qual a Dr.ª Responsavel" id="responsavel" >
+                <input type="text" name="cpf" placeholder="CPF" id="CPFyes">
+                <input type="text" name="Endereco" placeholder="Endereço" id="enderecoyes">
+                <input type="date" name="Qualdia" placeholder="Qual o dia" id="dayyes">
+                <input type="text" name="beneficio" placeholder="Qual o Beneficio" id="beneficioyes">
+                <input type="text" name="responsavel" placeholder="Qual a Dr.ª Responsavel" id="responsavel">
             </div>
             <div id="responseNo">
                 <label for="novamente">Qual dia entrar em contato novamente?</label>
-                <input type="date" name="diaContato" placeholder="Contato Novamente" id="novamente" >
-                <input type="text" name="Endereco" placeholder="Endereço"  id="enderecono" >
+                <input type="date" name="diaContato" placeholder="Contato Novamente" id="novamente">
+                <input type="text" name="Endereco" placeholder="Endereço" id="enderecono">
             </div>
             <button type="submit" id="btn-cad">Cadastrar</button>
+            <p id="text-error"></p>
         </form>
 
         <div id="sucess">
-            <h2 id="text-sucess">Seu Cliente foi cadastrado com sucesso !!!</h2>
+            <h2 id="text-sucess"></h2>
             <button id="ok">OK</button>
         </div>
     </main>

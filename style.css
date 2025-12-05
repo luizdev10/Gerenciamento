@@ -112,10 +112,16 @@
     height: 40vh;
     margin: auto;
     border-radius: 6px;
-    background-color: var(--cor-destaque-secundaria);
-    display: flex;
+    background-color: var(--cor-borda);
+    display: none;
     flex-direction: column;
     justify-content: center;
+    position: fixed;
+    top:40%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    box-shadow: 8px 8px 8px rgba(41, 40, 40, 0.1);
 }
 #text-sucess{
     margin-top: 3em;
@@ -123,4 +129,8 @@
 }
 #ok{
     margin: auto;
+    padding: 10px;
+    border-radius: 6px;
+    border:0;
+    box-shadow: 0 8px 7px rgba(0, 0, 0, 0.1);
 }
