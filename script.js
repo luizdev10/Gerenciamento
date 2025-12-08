@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const formCli = document.getElementById('formClient');
+    const buttom = document.getElementById('btn-cad');
     
 
     const checkSim = document.getElementById('sim');
@@ -24,7 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
         novamentday: document.getElementById('novamente'),
         indicacao: document.getElementById('indicacao'),
     }
+    
+    const addloading = ()=>{
+       buttom.innerHTML = "Carregando....";
+    }
 
+    const removeloading = ()=>{
+       buttom.innerHTML = "Cadastrar";
+    }
 
     const mostrarCheck = (event) => {
         const escolha = event.target.value;
@@ -50,9 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    const envForm = async (event) => { // Renomeado para 'envForm'
+    const envForm = async (event) => { 
         event.preventDefault();
-        
+        addloading();
 
         mensagemError.innerHTML = ''; 
         mensagemsucess.innerHTML = '';
@@ -117,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     
-        let evalid = true;
+        let valido = true;
 
         for (const chave in validador) {
             const campos = validador[chave];
@@ -126,20 +134,19 @@ document.addEventListener('DOMContentLoaded', () => {
             if (elemento && elemento.value.trim() === "") {
                 mensagemError.innerHTML = campos.mensagem;
                 mensagemError.style.color = "red";
-                elemento.focus();
                 elemento.style.border = '2px solid red';
-                evalid = false;
+                elemento.focus();
+                valido = false;
                 break;
             } else if (elemento) {
                 elemento.style.border = '';
             }
         }
         
-        if (!evalid) {
+        if (!valido) {
             return;
         }
 
-     
         
         try {
             const response = await fetch("https://api.sheetmonkey.io/form/4vCwapwkA6uq1ARtdgFu3v", {
@@ -147,18 +154,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(payload),
-            });
+                body: JSON.stringify(payload)
+            })
 
             if (response.ok) {
-                // SUCESSO!
+                
                 mensagemsucess.innerHTML = "✅ Envio realizado com sucesso!";
                 mensagemsucess.style.color = "green";
                 
                 const sucessModal = document.getElementById('sucess');
-                if (sucessModal) sucessModal.style.display = 'flex';
+                if (sucessModal) {sucessModal.style.display = 'flex'};
                 
-                // Limpar o formulário inteiro
                 formCli.reset(); 
                 yesResponse.style.display = 'none';
                 NoResponse.style.display = 'none';
@@ -166,8 +172,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const okButton = document.getElementById('ok');
                 if (okButton) {
                      okButton.addEventListener('click', () => {
-                         if (sucessModal) sucessModal.style.display = 'none';
-                         mensagemsucess.innerHTML = ''; 
+                         if (sucessModal) {sucessModal.style.display = 'none'};
+                         mensagemsucess.innerHTML = '';
+                         removeloading()
                      }, { once: true }); 
                 }
 
