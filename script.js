@@ -60,27 +60,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const envForm = async (event) => { 
         event.preventDefault();
-        addloading();
-
+        
         mensagemError.innerHTML = ''; 
         mensagemsucess.innerHTML = '';
         
-
+        
         const escolha = checkSim.checked ? "sim" : checkNao.checked ? "nao" : null;
-
+        
         if (!escolha) {
             mensagemError.innerHTML = "Por favor, marque 'Sim' ou 'Não'.";
             mensagemError.style.color = "red";
             return;
         }
-
+        
         let validador = {};
         let payload = {};
-
-
-
+        
+        
+        
         if (escolha === "sim") {
-
+            
             validador = {
                 nome: { elemento: inputs.nome, mensagem: "Preencha o Nome Completo!" },
                 tel: { elemento: inputs.tel, mensagem: "Preencha o Telefone!" },
@@ -92,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 responsavel: { elemento: inputs.responsavel, mensagem: "Preencha Quem é o Responsável!" },
             };
             
-
+            
             payload = {
                 Nome: inputs.nome.value,
                 Telefone: inputs.tel.value,
@@ -103,9 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 Beneficio: inputs.beneficio.value,
                 Responsavel: inputs.responsavel.value,
             };
-
+            
         } else { 
-
+            
             validador = {
                 nome: { elemento: inputs.nome, mensagem: "Preencha o Nome Completo!" },
                 tel: { elemento: inputs.tel, mensagem: "Preencha o Telefone!" },
@@ -114,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 diaNovo: { elemento: inputs.novamentday, mensagem: "Preencha o dia para Entrar em Contato!" }
             };
             
-
+            
             payload = {
                 Nome: inputs.nome.value,
                 Telefone: inputs.tel.value,
@@ -123,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 Dia_Contato: inputs.novamentday.value,
             };
         }
+        addloading();
 
     
         let valido = true;
