@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (elemento && elemento.value.trim() === "") {
                 mensagemError.innerHTML = campos.mensagem;
-                mensagemError.style.color = "red";
+                mensagemError.style.color = "#D93025";
                 elemento.style.border = '2px solid red';
                 elemento.focus();
                 valido = false;
