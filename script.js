@@ -122,15 +122,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 Dia_Contato: inputs.novamentday.value,
             };
         }
-        addloading();
-
-    
+        
+        
         let valido = true;
-
+        
         for (const chave in validador) {
             const campos = validador[chave];
             const elemento = campos.elemento;
-
+            
             if (elemento && elemento.value.trim() === "") {
                 mensagemError.innerHTML = campos.mensagem;
                 mensagemError.style.color = "#D93025";
@@ -146,7 +145,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!valido) {
             return;
         }
-
+        
+        addloading();
         
         try {
             const response = await fetch("https://api.sheetmonkey.io/form/4vCwapwkA6uq1ARtdgFu3v", {

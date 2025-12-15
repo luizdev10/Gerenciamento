@@ -10,7 +10,7 @@
     --primary: #4A4A4A;
     --primary-dark: #2F2F2F;
     --primary-light: #6A6A6A;
-    --background: #f7ebeb;
+    --background: #ebdfdf;
     --background-alt: #f0eded;
     --background-form: #D5D5D5;
     --success: #4CAF50;
@@ -149,4 +149,275 @@
     border: 0;
     box-shadow: 0 8px 7px rgba(0, 0, 0, 0.1);
     background-color: var(--background);
+}
+
+
+@media(min-width: 1200px) {
+    
+
+
+#formClient {
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-form);
+    gap: 5px;
+    padding: 20px;
+    box-shadow: 8px 8px 8px rgba(41, 40, 40, 0.1);
+}
+
+#nomeCompleto {
+    padding: 15px;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--background-alt);
+}
+
+.division {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.division #telefone {
+    width: 90%;
+    margin-right: 2px;
+    padding: 15px;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--background-alt);
+}
+
+.division #indicacao {
+    width: 90%;
+    margin-left: 6px;
+    padding: 15px;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--background-alt);
+}
+
+#converteu {
+    margin: auto;
+    font-size: 20px;
+}
+
+#check {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#responseYes {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+#CPFyes,
+#enderecoyes,
+#dayyes,
+#beneficioyes,
+#responsavel,
+#novamente,
+#enderecono {
+    padding: 15px;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--background-alt);
+}
+
+#responseNo {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#btn-cad {
+    width: 40%;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 0;
+    padding: 16px;
+    font-size: 1em;
+    background-color: var(--background);
+    box-shadow: 8px 8px 8px rgba(41, 40, 40, 0.1);
+}
+
+#sucess {
+    font-size: 0.7em;
+    width: 40vw;
+    height: 40vh;
+    margin: auto;
+    border-radius: 6px;
+    background-color: var(--background-alt);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    box-shadow: 8px 8px 8px rgba(41, 40, 40, 0.1);
+}
+
+#text-sucess {
+    font-size: 25px;
+    margin-top: 3em;
+    text-align: center;
+    color: var(--success)
+}
+
+#ok {
+    margin: auto;
+    padding: 20px;
+    border-radius: 6px;
+    border: 0;
+    box-shadow: 0 8px 7px rgba(0, 0, 0, 0.1);
+    background-color: var(--background);
+}
+}
+@media(min-width: 992px) and (max-width : 1200px) {
+    
+    #area-header {
+    width: 100vw;
+    display: flex;
+}
+
+.title {
+    margin: 10px auto;
+    color: var(--primary);
+}
+
+#formClient {
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-form);
+    gap: 5px;
+    padding: 5px;
+    box-shadow: 8px 8px 8px rgba(41, 40, 40, 0.1);
+}
+
+#nomeCompleto {
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--background-alt);
+}
+
+.division {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.division #telefone {
+    width: 90%;
+    margin-right: 2px;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--background-alt);
+}
+
+.division #indicacao {
+    width: 90%;
+    margin-left: 6px;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--background-alt);
+}
+
+#converteu {
+    margin: auto;
+    font-size: 20px;
+}
+
+#check {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#responseYes {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+#CPFyes,
+#enderecoyes,
+#dayyes,
+#beneficioyes,
+#responsavel,
+#novamente,
+#enderecono {
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--background-alt);
+}
+
+#responseNo {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#btn-cad {
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 0;
+    padding: 7px;
+    font-size: 1em;
+    background-color: var(--background);
+    box-shadow: 8px 8px 8px rgba(41, 40, 40, 0.1);
+}
+
+#sucess {
+    font-size: 0.7em;
+    width: 70vw;
+    height: 40vh;
+    margin: auto;
+    border-radius: 6px;
+    background-color: var(--background-alt);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    box-shadow: 8px 8px 8px rgba(41, 40, 40, 0.1);
+}
+
+#text-sucess {
+    margin-top: 3em;
+    text-align: center;
+    color: var(--success)
+}
+
+#ok {
+    margin: auto;
+    padding: 10px;
+    border-radius: 6px;
+    border: 0;
+    box-shadow: 0 8px 7px rgba(0, 0, 0, 0.1);
+    background-color: var(--background);
+}
 }
